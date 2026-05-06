@@ -1,6 +1,6 @@
 import { useState } from "react";
 import TodoForm from "../TodoForm";
-import { useFetch } from "../../hooks/useFetch";
+import { createRequest } from "../../hooks/createRequest";
 
 
 export default function UpdateTodoItem(props) {
@@ -11,7 +11,7 @@ export default function UpdateTodoItem(props) {
     } = props;
 
     const [newTitle, setNewTitle] = useState(todo.title);
-    const { request } = useFetch();
+    const { request } = createRequest();
 
     const onHandleSubmit = async (e) => {
         e.preventDefault();

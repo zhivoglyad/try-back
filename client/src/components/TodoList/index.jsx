@@ -1,4 +1,4 @@
-import { useFetch } from "../../hooks/useFetch";
+import { createRequest } from "../../hooks/createRequest";
 
 export default function TodoList(props) {
     const {
@@ -7,7 +7,7 @@ export default function TodoList(props) {
         setEditingTodo,
     } = props;
 
-    const { request } = useFetch();
+    const { request } = createRequest();
 
     const deleteTodoItem = async (title) => {
 

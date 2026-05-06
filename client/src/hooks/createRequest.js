@@ -1,5 +1,5 @@
 
-export const useFetch = () => {
+export const createRequest = () => {
 
     const request = async (url, method, body) => {
 
